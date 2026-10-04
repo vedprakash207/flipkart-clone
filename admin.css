@@ -178,7 +178,8 @@ a {
 
 .ghost-btn,
 .mini-btn,
-.primary-btn {
+.primary-btn,
+.submit-btn {
   border: none;
   padding: 11px 16px;
   border-radius: 10px;
@@ -191,9 +192,14 @@ a {
   border: 1px solid var(--line);
 }
 
-.primary-btn {
+.primary-btn,
+.submit-btn {
   background: var(--primary);
   color: #fff;
+}
+
+.primary-btn {
+  padding-inline: 18px;
 }
 
 .stats-grid {
@@ -428,18 +434,6 @@ tbody tr:last-child td {
   background-position: center;
 }
 
-.thumb-1 {
-  background-image: url('https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=300&q=80');
-}
-
-.thumb-2 {
-  background-image: url('https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&w=300&q=80');
-}
-
-.thumb-3 {
-  background-image: url('https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?auto=format&fit=crop&w=300&q=80');
-}
-
 .product-item h4 {
   font-size: 0.95rem;
   margin-bottom: 4px;
@@ -480,6 +474,80 @@ tbody tr:last-child td {
   color: var(--primary);
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  display: grid;
+  place-items: center;
+  z-index: 200;
+  padding: 18px;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: min(480px, 100%);
+  background: white;
+  border-radius: 18px;
+  padding: 22px 20px 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: #eef3ff;
+  color: var(--text);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
+.modal-content h3 {
+  margin-bottom: 18px;
+}
+
+#productForm {
+  display: grid;
+  gap: 14px;
+}
+
+.field-row {
+  display: grid;
+  gap: 8px;
+}
+
+.field-row label {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.field-row input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
 @media (max-width: 1100px) {
   .stats-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -511,7 +579,8 @@ tbody tr:last-child td {
 
 @media (max-width: 560px) {
   .stats-grid,
-  .side-nav {
+  .side-nav,
+  .field-grid {
     grid-template-columns: 1fr;
   }
 

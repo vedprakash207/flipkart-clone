@@ -50,7 +50,7 @@
 
           <div class="top-actions">
             <button class="ghost-btn" type="button">Export Report</button>
-            <button class="primary-btn" type="button">+ Add Product</button>
+            <button class="primary-btn" id="openAddProductModal" type="button">+ Add Product</button>
           </div>
         </header>
 
@@ -221,37 +221,10 @@
                 <p class="eyebrow small">Catalog</p>
                 <h3>Product List</h3>
               </div>
-              <button class="mini-btn" type="button">Manage</button>
+              <button class="mini-btn" type="button" id="refreshProductsBtn">Manage</button>
             </div>
 
-            <div class="product-list">
-              <div class="product-item">
-                <div class="thumb thumb-1"></div>
-                <div>
-                  <h4>Noise Buds</h4>
-                  <p>Electronics</p>
-                </div>
-                <strong>₹2,490</strong>
-              </div>
-
-              <div class="product-item">
-                <div class="thumb thumb-2"></div>
-                <div>
-                  <h4>Urban Sneakers</h4>
-                  <p>Fashion</p>
-                </div>
-                <strong>₹1,990</strong>
-              </div>
-
-              <div class="product-item">
-                <div class="thumb thumb-3"></div>
-                <div>
-                  <h4>Smart Speaker</h4>
-                  <p>Home</p>
-                </div>
-                <strong>₹3,699</strong>
-              </div>
-            </div>
+            <div class="product-list" id="productList"></div>
           </div>
 
           <div class="panel" id="customers">
@@ -291,6 +264,43 @@
           </div>
         </section>
       </main>
+    </div>
+
+    <div class="modal hidden" id="productModal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+        <button class="close-modal" id="closeProductModal" type="button" aria-label="Close product modal">×</button>
+        <h3 id="productModalTitle">Add New Product</h3>
+
+        <form id="productForm">
+          <div class="field-row">
+            <label for="productName">Product Name</label>
+            <input id="productName" name="name" type="text" placeholder="Enter product name" required />
+          </div>
+
+          <div class="field-row">
+            <label for="productCategory">Category</label>
+            <input id="productCategory" name="category" type="text" placeholder="Electronics, Fashion, Home..." required />
+          </div>
+
+          <div class="field-grid">
+            <div class="field-row">
+              <label for="productPrice">Price</label>
+              <input id="productPrice" name="price" type="number" min="1" placeholder="1999" required />
+            </div>
+            <div class="field-row">
+              <label for="productStock">Stock</label>
+              <input id="productStock" name="stock" type="number" min="0" placeholder="50" required />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label for="productImage">Image URL</label>
+            <input id="productImage" name="image" type="url" placeholder="https://example.com/image.jpg" required />
+          </div>
+
+          <button class="submit-btn" type="submit">Save Product</button>
+        </form>
+      </div>
     </div>
 
     <script src="admin.js"></script>
