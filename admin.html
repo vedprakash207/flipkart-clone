@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="admin-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="logo-mini">F</div>
+          <div>
+            <p class="brand-small">Flipkart</p>
+            <h2>Admin</h2>
+          </div>
+        </div>
+
+        <nav class="side-nav">
+          <a class="nav-link active" href="#dashboard">Dashboard</a>
+          <a class="nav-link" href="#orders">Orders</a>
+          <a class="nav-link" href="#products">Products</a>
+          <a class="nav-link" href="#customers">Customers</a>
+          <a class="nav-link" href="#reports">Reports</a>
+          <a class="nav-link" href="#settings">Settings</a>
+        </nav>
+
+        <div class="profile-card">
+          <div class="avatar">VP</div>
+          <div>
+            <h4>Ved Prakash</h4>
+            <p>Store Manager</p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar" id="dashboard">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h1>Dashboard</h1>
+          </div>
+
+          <div class="top-actions">
+            <button class="ghost-btn" type="button">Export Report</button>
+            <button class="primary-btn" type="button">+ Add Product</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card accent-blue">
+            <div>
+              <p>Total Revenue</p>
+              <h3>₹8,42,500</h3>
+            </div>
+            <span class="delta positive">+18.2%</span>
+          </article>
+
+          <article class="stat-card accent-green">
+            <div>
+              <p>Orders</p>
+              <h3>2,459</h3>
+            </div>
+            <span class="delta positive">+12.4%</span>
+          </article>
+
+          <article class="stat-card accent-gold">
+            <div>
+              <p>Visitors</p>
+              <h3>1,28,900</h3>
+            </div>
+            <span class="delta positive">+8.6%</span>
+          </article>
+
+          <article class="stat-card accent-purple">
+            <div>
+              <p>Conversion</p>
+              <h3>4.8%</h3>
+            </div>
+            <span class="delta negative">-0.9%</span>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel chart-panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow small">Performance</p>
+                <h3>Sales Overview</h3>
+              </div>
+              <button class="mini-btn" type="button">This Month</button>
+            </div>
+
+            <div class="chart-bars" aria-label="Monthly sales chart">
+              <div class="bar-group">
+                <span class="bar" style="height: 46%;"></span>
+                <label>Jan</label>
+              </div>
+              <div class="bar-group">
+                <span class="bar" style="height: 58%;"></span>
+                <label>Feb</label>
+              </div>
+              <div class="bar-group">
+                <span class="bar" style="height: 49%;"></span>
+                <label>Mar</label>
+              </div>
+              <div class="bar-group">
+                <span class="bar" style="height: 73%;"></span>
+                <label>Apr</label>
+              </div>
+              <div class="bar-group">
+                <span class="bar" style="height: 67%;"></span>
+                <label>May</label>
+              </div>
+              <div class="bar-group">
+                <span class="bar active" style="height: 91%;"></span>
+                <label>Jun</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel quick-panel" id="reports">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow small">Quick Stats</p>
+                <h3>Inventory Status</h3>
+              </div>
+            </div>
+
+            <div class="inventory-list">
+              <div class="inventory-row">
+                <span>Electronics</span>
+                <strong>84%</strong>
+              </div>
+              <div class="progress"><i style="width: 84%"></i></div>
+
+              <div class="inventory-row">
+                <span>Fashion</span>
+                <strong>61%</strong>
+              </div>
+              <div class="progress"><i style="width: 61%"></i></div>
+
+              <div class="inventory-row">
+                <span>Home</span>
+                <strong>72%</strong>
+              </div>
+              <div class="progress"><i style="width: 72%"></i></div>
+
+              <div class="inventory-row">
+                <span>Beauty</span>
+                <strong>55%</strong>
+              </div>
+              <div class="progress"><i style="width: 55%"></i></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel table-panel" id="orders">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow small">Tracking</p>
+              <h3>Recent Orders</h3>
+            </div>
+            <button class="mini-btn" type="button">View All</button>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Products</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#FDP-1024</td>
+                <td>Arjun Mehta</td>
+                <td>Smartwatch Pro</td>
+                <td><span class="status green">Paid</span></td>
+                <td>₹2,299</td>
+              </tr>
+              <tr>
+                <td>#FDP-1028</td>
+                <td>Nisha Sharma</td>
+                <td>Running Shoes</td>
+                <td><span class="status amber">Packed</span></td>
+                <td>₹1,499</td>
+              </tr>
+              <tr>
+                <td>#FDP-1031</td>
+                <td>Sachin Verma</td>
+                <td>Wireless Headset</td>
+                <td><span class="status blue">Shipped</span></td>
+                <td>₹1,899</td>
+              </tr>
+              <tr>
+                <td>#FDP-1042</td>
+                <td>Priya Nair</td>
+                <td>Accent Chair</td>
+                <td><span class="status red">Pending</span></td>
+                <td>₹5,499</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="bottom-grid">
+          <div class="panel" id="products">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow small">Catalog</p>
+                <h3>Product List</h3>
+              </div>
+              <button class="mini-btn" type="button">Manage</button>
+            </div>
+
+            <div class="product-list">
+              <div class="product-item">
+                <div class="thumb thumb-1"></div>
+                <div>
+                  <h4>Noise Buds</h4>
+                  <p>Electronics</p>
+                </div>
+                <strong>₹2,490</strong>
+              </div>
+
+              <div class="product-item">
+                <div class="thumb thumb-2"></div>
+                <div>
+                  <h4>Urban Sneakers</h4>
+                  <p>Fashion</p>
+                </div>
+                <strong>₹1,990</strong>
+              </div>
+
+              <div class="product-item">
+                <div class="thumb thumb-3"></div>
+                <div>
+                  <h4>Smart Speaker</h4>
+                  <p>Home</p>
+                </div>
+                <strong>₹3,699</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" id="customers">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow small">Customers</p>
+                <h3>Top Buyers</h3>
+              </div>
+            </div>
+
+            <div class="customer-list">
+              <div class="customer-item">
+                <div class="avatar-sm">A</div>
+                <div>
+                  <strong>Arjun</strong>
+                  <p>Premium buyer</p>
+                </div>
+                <span>₹28k</span>
+              </div>
+              <div class="customer-item">
+                <div class="avatar-sm alt">N</div>
+                <div>
+                  <strong>Nisha</strong>
+                  <p>Fashion lover</p>
+                </div>
+                <span>₹24k</span>
+              </div>
+              <div class="customer-item">
+                <div class="avatar-sm alt2">S</div>
+                <div>
+                  <strong>Sachin</strong>
+                  <p>Electronics</p>
+                </div>
+                <span>₹21k</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
